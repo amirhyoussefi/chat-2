@@ -6,12 +6,13 @@ import { defaultModel, supportedModels } from '@configs';
 import { Message } from '@interfaces';
 import { loadBalancer } from '@utils/server';
 import { apiKeyStrategy, apiKeys, baseURL, config, password as pwd } from '.';
+import { SYSTEM_INSTRUCTIONS } from './system_instructions';
 
 export { config };
 
 export const post: APIRoute = async ({ request }) => {
   if (!baseURL) {
-    return new Response(JSON.stringify({ msg: 'No LOCAL_PROXY provided' }), {
+    return new Response(JSON.stringify({ msg: 'No LOCAL_ provided' }), {
       status: 400,
     });
   }
@@ -52,6 +53,15 @@ export const post: APIRoute = async ({ request }) => {
   }
 
   try {
+    const myMessages = messages.map((message: Message) => ({
+      role: message.role,
+      content: message.content,
+    }));
+    const assistantMessage = {
+      role: 'system',
+      content: SYSTEM_INSTRUCTIONS,
+    };
+    myMessages.unshift(assistantMessage);
     const res = await fetch(`https://${baseURL}/v1/chat/completions`, {
       headers: {
         'Content-Type': 'application/json',
@@ -60,10 +70,7 @@ export const post: APIRoute = async ({ request }) => {
       method: 'POST',
       body: JSON.stringify({
         model,
-        messages: messages.map((message: Message) => ({
-          role: message.role,
-          content: message.content,
-        })),
+        messages: myMessages,
         temperature,
         stream: true,
       }),
