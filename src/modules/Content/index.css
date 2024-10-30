@@ -1,0 +1,8 @@
+.icon-pdf {
+  background-image: url('/pdf-file-svgrepo-com.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+}
