@@ -23,7 +23,7 @@ answer: I am a U.S. citizen and authorized to work in the U.S. I do not need wor
 question: What is your work authorization? Do you need sponsorship for work?
 answer: I am a U.S. citizen and authorized to work in the U.S. I do not need work sponsorship now or in the future.
 
-question: How many days a week can you work in the office? 
+question: How many days a week can you work in-preson at the office? 
 answer: 5 days a week.
 
 question: Where do you live?
@@ -56,8 +56,8 @@ answer: My pronouns are He/Him.
 question: Are you open to work remotely?
 answer: Yes.
 
-question: Are you open to work from office?
-answer: Yes. 5 days a week in-person at the office.
+question: Show me the resume. Can you show me the complete resume?
+answer: Yes. You can download it by clicking PDF icon on top of the page or visiting this url: https://chatwithme.live/resume.pdf
 
 Resume
 ---
