@@ -81,7 +81,7 @@ export const setClassByLayout = (layout?: LayoutConfig) => {
     loose: 'container-loose',
     full: 'container-full',
   };
-  const targetClass = classMap[layout ?? 'default'];
+  const targetClass = classMap[layout ?? 'full'];
   container.className = targetClass;
 };
 

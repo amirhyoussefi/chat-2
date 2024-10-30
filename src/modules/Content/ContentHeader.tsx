@@ -5,6 +5,7 @@ import GlobalContext from '@contexts/global';
 import { Tooltip } from 'antd';
 import ExportConversationModal from '@components/ConversationModal/export';
 import EditModal from '@components/EditModal';
+import './index.css';
 
 interface ContentHeaderProps {
   conversation: Conversation;
@@ -58,18 +59,10 @@ const ContentHeader: FC<ContentHeaderProps> = ({
         </div>
       </div>
       <div>
-        <Tooltip title={i18n.action_output}>
-          <ConfigIcon
-            name="ri-chat-download-line mr-2"
-            onClick={() => {
-              setVisible(true);
-            }}
-          />
-        </Tooltip>
         {conversation.mode === 'image' ? null : (
           <Tooltip title={i18n.action_prompt}>
             <ConfigIcon
-              name="ri-user-add-line mr-2"
+              name="ri-questionnaire-line mr-2"
               onClick={() => {
                 setText('/');
                 setShowPrompt(true);
@@ -77,6 +70,30 @@ const ContentHeader: FC<ContentHeaderProps> = ({
             />
           </Tooltip>
         )}
+        <Tooltip title="PDF">
+          <ConfigIcon
+            name="icon-pdf mr-2"
+            onClick={() => {
+              window.open('/resume.pdf');
+            }}
+          />
+        </Tooltip>
+        <Tooltip title="Linkedin">
+          <ConfigIcon
+            name="ri-linkedin-box-fill mr-2"
+            onClick={() => {
+              window.open('http://linkedin.com/in/youssefi');
+            }}
+          />
+        </Tooltip>
+        {/* <Tooltip title={i18n.action_output}>
+          <ConfigIcon
+            name="ri-chat-download-line mr-2"
+            onClick={() => {
+              setVisible(true);
+            }}
+          />
+        </Tooltip> */}
         <ConfigIcon
           name="ri-settings-3-line"
           onClick={() => setActiveSetting((active) => !active)}

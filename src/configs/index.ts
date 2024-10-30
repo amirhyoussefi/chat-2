@@ -32,11 +32,11 @@ export const supportedLanguages = [
   },
 ];
 
-export const layoutConfig = ['full', 'loose', 'default'] as const;
+export const layoutConfig = ['loose', 'default', 'full'] as const;
 
 export type LayoutConfig = (typeof layoutConfig)[number];
 
-export const defaultLayoutConfig: LayoutConfig = 'default';
+export const defaultLayoutConfig: LayoutConfig = 'full';
 
 export const defaultGloablConfig: GlobalConfig = {
   password: '',

@@ -12,7 +12,7 @@ const inVercel = !!process.env.VERCEL;
 ---
 
 <Layout title="ChatWithMe">
-  <div id="container" class="container-default">
+  <div id="container" class="container-full">
     <Main lang={lang} inVercel={inVercel} client:only="react" />
   </div>
 </Layout>
