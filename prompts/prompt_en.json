@@ -18,5 +18,25 @@
   {
     "act": "Show Resume",
     "prompt": "Show me your whole resume."
+  },
+  {
+    "act": "Spanish",
+    "prompt": "Show me summary of the resume in french."
+  },
+  {
+    "act": "Disability?",
+    "prompt": "Do you have any Disability?"
+  },
+  {
+    "act": "Are you open to work 5 days a week from the office?",
+    "prompt": "Are you open to work 5 days a week from the office?"
+  },
+  {
+    "act": "Are you open to work remotely?",
+    "prompt": "Are you open to work remotely?"
+  },
+  {
+    "act": "Where are you in your job search now?",
+    "prompt": "Where are you in your job search now?"
   }
 ]
