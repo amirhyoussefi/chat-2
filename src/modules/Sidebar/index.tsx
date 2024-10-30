@@ -40,35 +40,35 @@ const Sidebar: FC<{
     }
   };
 
-  const items: MenuProps['items'] = [
-    {
-      key: '1',
-      label: (
-        <div onClick={() => onAdd()}>
-          <i className="ri-chat-4-line align-bottom mr-1" />
-          {i18n.action_add_text}
-        </div>
-      ),
-    },
-    {
-      key: '2',
-      label: (
-        <div onClick={() => onAdd('image')}>
-          <i className="ri-image-line align-bottom mr-1" />
-          {i18n.action_add_image}
-        </div>
-      ),
-    },
-    {
-      key: '3',
-      label: (
-        <div onClick={() => setVisible(true)}>
-          <i className="ri-chat-upload-line align-bottom mr-1" />
-          {i18n.action_import}
-        </div>
-      ),
-    },
-  ];
+  // const items: MenuProps['items'] = [
+  //   {
+  //     key: '1',
+  //     label: (
+  //       <div onClick={() => onAdd()}>
+  //         <i className="ri-chat-4-line align-bottom mr-1" />
+  //         {i18n.action_add_text}
+  //       </div>
+  //     ),
+  //   },
+  //   {
+  //     key: '2',
+  //     label: (
+  //       <div onClick={() => onAdd('image')}>
+  //         <i className="ri-image-line align-bottom mr-1" />
+  //         {i18n.action_add_image}
+  //       </div>
+  //     ),
+  //   },
+  //   {
+  //     key: '3',
+  //     label: (
+  //       <div onClick={() => setVisible(true)}>
+  //         <i className="ri-chat-upload-line align-bottom mr-1" />
+  //         {i18n.action_import}
+  //       </div>
+  //     ),
+  //   },
+  // ];
 
   const filterData = data.filter(
     (item) =>
@@ -102,14 +102,14 @@ const Sidebar: FC<{
             allowClear
           />
         </div>
-        <Dropdown
+        {/* <Dropdown
           menu={{ items }}
           trigger={['click']}
           placement="bottomRight"
           getPopupContainer={(node) => node}
         >
           <i className="ri-chat-new-line cursor-pointer p-2 ml-1" />
-        </Dropdown>
+        </Dropdown> */}
       </div>
       <div className="common-scrollbar flex-1 p-2 pt-0 overflow-auto">
         {sortBy(filterData, ['time'])
