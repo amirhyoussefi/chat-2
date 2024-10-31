@@ -59,6 +59,16 @@ const ContentHeader: FC<ContentHeaderProps> = ({
         </div>
       </div>
       <div>
+        <Tooltip title="Voice Chat">
+          <ConfigIcon
+            name="ri-chat-voice-ai-line mr-2"
+            onClick={() => {
+              window.open(
+                'https://self-adaptive-interface-14r2uj.sandbox.livekit.io'
+              );
+            }}
+          />
+        </Tooltip>
         {conversation.mode === 'image' ? null : (
           <Tooltip title={i18n.action_prompt}>
             <ConfigIcon
@@ -80,7 +90,7 @@ const ContentHeader: FC<ContentHeaderProps> = ({
         </Tooltip>
         <Tooltip title="Linkedin">
           <ConfigIcon
-            name="ri-linkedin-box-fill mr-2"
+            name="ri-linkedin-box-line mr-2"
             onClick={() => {
               window.open('http://linkedin.com/in/youssefi');
             }}

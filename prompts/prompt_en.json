@@ -1,5 +1,9 @@
 [
   {
+    "act": "Voice Conversation",
+    "prompt": "Can I have Voice Conversation with you?"
+  },
+  {
     "act": "Work Authorization",
     "prompt": "Do you now or in the future need sponsorship to work in the U.S.?"
   },
