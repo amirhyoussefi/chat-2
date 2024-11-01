@@ -32,11 +32,11 @@ const ContentHeader: FC<ContentHeaderProps> = ({
 
   return (
     <div
-      className={`w-full h-[60px] flex items-center justify-between ${
+      className={`w-full h-[60px] flex items-center justify-end ${
         isMobile ? '' : 'pl-5'
       } pr-5 border-b border-b-[#edeeee] overflow-hidden`}
     >
-      <div className="flex items-center flex-1 overflow-hidden mr-2">
+      {/* <div className="flex items-center flex-1 overflow-hidden mr-2">
         {isMobile ? (
           <i
             className="ri-arrow-left-line p-3 ml-2 cursor-pointer"
@@ -57,11 +57,11 @@ const ContentHeader: FC<ContentHeaderProps> = ({
             />
           </div>
         </div>
-      </div>
-      <div>
+      </div> */}
+      <div className="flex justify-end mr-2">
         <Tooltip title="Voice Chat">
           <ConfigIcon
-            name="ri-chat-voice-ai-line mr-2"
+            name="ri-chat-voice-ai-line ri-xl mr-2"
             onClick={() => {
               window.open(
                 'https://self-adaptive-interface-14r2uj.sandbox.livekit.io'
@@ -72,7 +72,7 @@ const ContentHeader: FC<ContentHeaderProps> = ({
         {conversation.mode === 'image' ? null : (
           <Tooltip title={i18n.action_prompt}>
             <ConfigIcon
-              name="ri-questionnaire-line mr-2"
+              name="ri-questionnaire-line ri-xl mr-2"
               onClick={() => {
                 setText('/');
                 setShowPrompt(true);
@@ -82,7 +82,7 @@ const ContentHeader: FC<ContentHeaderProps> = ({
         )}
         <Tooltip title="PDF">
           <ConfigIcon
-            name="icon-pdf mr-2"
+            name="ri-article-line ri-xl mr-2"
             onClick={() => {
               window.open('/resume.pdf');
             }}
@@ -90,7 +90,7 @@ const ContentHeader: FC<ContentHeaderProps> = ({
         </Tooltip>
         <Tooltip title="Linkedin">
           <ConfigIcon
-            name="ri-linkedin-box-line mr-2"
+            name="ri-linkedin-box-line ri-xl mr-2"
             onClick={() => {
               window.open('http://linkedin.com/in/youssefi');
             }}
@@ -98,14 +98,14 @@ const ContentHeader: FC<ContentHeaderProps> = ({
         </Tooltip>
         {/* <Tooltip title={i18n.action_output}>
           <ConfigIcon
-            name="ri-chat-download-line mr-2"
+            name="ri-chat-download-line ri-xl mr-2"
             onClick={() => {
               setVisible(true);
             }}
           />
         </Tooltip> */}
         <ConfigIcon
-          name="ri-settings-3-line"
+          name="ri-settings-3-line ri-xl"
           onClick={() => setActiveSetting((active) => !active)}
         />
       </div>
