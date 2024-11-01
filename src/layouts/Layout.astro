@@ -118,7 +118,7 @@ const { title } = Astro.props;
   .common-scrollbar .ant-dropdown-menu::-webkit-scrollbar-track {
     background-color: transparent;
   }
-  /* 定义动画效果 */
+  /* keyframes fade-in */
   @keyframes fadeIn {
     0% {
       opacity: 0;
@@ -130,7 +130,7 @@ const { title } = Astro.props;
     }
   }
 
-  /* 给要添加动画的元素应用动画 */
+  /* fade-in */
   .msg-fade-in {
     animation-name: fadeIn;
     animation-duration: 1s;

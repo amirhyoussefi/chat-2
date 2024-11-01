@@ -86,11 +86,32 @@ const Sidebar: FC<{
           SpeakWithMe
         </span>
       </div>
-      <div className="p-6 flex items-center justify-between">
+      <div className="p-6 pb-2 flex items-center justify-between">
         <img src="/my-picture.png" />
       </div>
       <div className="mb-4 flex items-baseline justify-center">
-        <span className="text-xl font-700">Amir Youssefi</span>
+        <span className="text-3xl font-700">Amir Youssefi</span>
+      </div>
+      <div className="mb-4 inline-flex rounded-md items-baseline justify-center">
+        <button
+          type="button"
+          className="inline-block rounded-3x bg-slate-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-slate-500 focus:bg-primary-accent-300 focus:outline-none focus:ring-0 active:bg-primary-600 motion-reduce:transition-none"
+          data-twe-ripple-init
+          data-twe-ripple-color="light"
+        >
+          Professional Profile
+        </button>
+        <button
+          type="button"
+          className="active inline-block rounded-3x bg-slate-300 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-black transition duration-150 ease-in-out hover:bg-slate-500 focus:bg-primary-accent-300 focus:outline-none focus:ring-0 active:bg-primary-600 motion-reduce:transition-none"
+          data-twe-ripple-init
+          data-twe-ripple-color="light"
+          onClick={() => {
+            window.open('/personal');
+          }}
+        >
+          Personal Profile
+        </button>
       </div>
       <div className="p-2 flex items-center justify-between mb-4">
         <div className="rounded-xl h-10 border flex-1">
