@@ -136,8 +136,16 @@ const MessageInput: FC<{
       <i
         className={`${
           disabled ? 'cursor-not-allowed' : 'cursor-pointer'
-        } text-gradient text-[24px] ml-[0.5rem] ri-send-plane-fill`}
+        } text-gradient text-[24px] ml-[0.5rem] ri-send-plane-line`}
         onClick={() => handleSubmit()}
+      />
+      <i
+        className="cursor-pointer text-gradient text-[24px] ml-[0.5rem] ri-chat-voice-ai-line"
+        onClick={() => {
+          window.open(
+            'https://self-adaptive-interface-14r2uj.sandbox.livekit.io'
+          );
+        }}
       />
     </div>
   );

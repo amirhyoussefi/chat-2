@@ -80,11 +80,17 @@ const Sidebar: FC<{
 
   return (
     <div className="flex flex-col h-full bg-white">
-      <div className="p-8 flex items-center justify-between mb-4">
+      <div className="h-[60px] pl-0 mt-0 flex items-center justify-center bg-slate-200">
+        <span className="pr-1 text-gradient ri-chat-voice-ai-line ri-2x"></span>
+        <span className="ui-monospace text-3xl text-gradient font-800">
+          SpeakWithMe
+        </span>
+      </div>
+      <div className="p-6 flex items-center justify-between">
         <img src="/my-picture.png" />
       </div>
-      <div className="p-4 mt-2 flex items-baseline justify-between">
-        <span className="text-3xl text-gradient font-[800]">SpeakWithMe</span>
+      <div className="mb-4 flex items-baseline justify-center">
+        <span className="text-xl font-700">Amir Youssefi</span>
       </div>
       <div className="p-2 flex items-center justify-between mb-4">
         <div className="rounded-xl h-10 border flex-1">
