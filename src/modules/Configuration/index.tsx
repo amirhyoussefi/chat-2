@@ -41,7 +41,7 @@ const Configuration: FC<ConfigurationProps> = ({
         <div>
           <Tooltip title={i18n.action_clear}>
             <ConfigIcon
-              name="ri-delete-bin-line mr-2"
+              name="ri-delete-bin-line ri-2x mr-2"
               onClick={() => {
                 setConversations({
                   [defaultConversation.id]: {

@@ -61,7 +61,7 @@ const ContentHeader: FC<ContentHeaderProps> = ({
       <div className="flex justify-end mr-2">
         <Tooltip title="Voice Chat">
           <ConfigIcon
-            name="ri-chat-voice-ai-line ri-xl mr-2"
+            name="ri-chat-voice-ai-line ri-2x mr-2"
             onClick={() => {
               window.open(
                 'https://self-adaptive-interface-14r2uj.sandbox.livekit.io'
@@ -72,7 +72,7 @@ const ContentHeader: FC<ContentHeaderProps> = ({
         {conversation.mode === 'image' ? null : (
           <Tooltip title={i18n.action_prompt}>
             <ConfigIcon
-              name="ri-questionnaire-line ri-xl mr-2"
+              name="ri-questionnaire-line ri-2x mr-2"
               onClick={() => {
                 setText('/');
                 setShowPrompt(true);
@@ -82,7 +82,7 @@ const ContentHeader: FC<ContentHeaderProps> = ({
         )}
         <Tooltip title="PDF">
           <ConfigIcon
-            name="ri-article-line ri-xl mr-2"
+            name="ri-article-line ri-2x mr-2"
             onClick={() => {
               window.open('/resume.pdf');
             }}
@@ -90,7 +90,7 @@ const ContentHeader: FC<ContentHeaderProps> = ({
         </Tooltip>
         <Tooltip title="Linkedin">
           <ConfigIcon
-            name="ri-linkedin-box-line ri-xl mr-2"
+            name="ri-linkedin-box-line ri-2x mr-2"
             onClick={() => {
               window.open('http://linkedin.com/in/youssefi');
             }}
@@ -105,7 +105,7 @@ const ContentHeader: FC<ContentHeaderProps> = ({
           />
         </Tooltip> */}
         <ConfigIcon
-          name="ri-settings-3-line ri-xl"
+          name="ri-settings-3-line ri-2x"
           onClick={() => setActiveSetting((active) => !active)}
         />
       </div>
