@@ -92,7 +92,7 @@ const Sidebar: FC<{
       <div className="mb-4 flex items-baseline justify-center">
         <span className="text-3xl font-700">Amir Youssefi</span>
       </div>
-      <div className="mb-4 inline-flex rounded-md items-baseline justify-center">
+      {/* <div className="mb-4 inline-flex rounded-md items-baseline justify-center">
         <button
           type="button"
           className="inline-block rounded-3x bg-slate-700 px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-slate-500 focus:bg-primary-accent-300 focus:outline-none focus:ring-0 active:bg-primary-600 motion-reduce:transition-none"
@@ -112,7 +112,7 @@ const Sidebar: FC<{
         >
           Personal Profile
         </button>
-      </div>
+      </div> */}
       <div className="p-2 flex items-center justify-between mb-4">
         <div className="rounded-xl h-10 border flex-1">
           <Input

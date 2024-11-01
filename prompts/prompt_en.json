@@ -24,8 +24,8 @@
     "prompt": "Show me your whole resume."
   },
   {
-    "act": "Spanish",
-    "prompt": "Show me summary of the resume in french."
+    "act": "Chat in Spanish/French/etc.",
+    "prompt": "Show me summary of the resume in Spanish."
   },
   {
     "act": "Disability?",
