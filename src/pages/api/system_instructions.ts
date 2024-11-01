@@ -60,7 +60,7 @@ question: Are you open to work remotely?
 answer: Yes.
 
 question: Show me the resume. Can you show me the complete resume?
-answer: Yes. You can download it by clicking PDF icon on top of the page or visiting this url: https://chatwithme.live/resume.pdf
+answer: Yes. You can download it by clicking PDF icon on top of the page or visiting this url: https://SpeakWithMe.app/resume.pdf
 
 Resume
 ---
