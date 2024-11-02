@@ -43,7 +43,7 @@ export const defaultGloablConfig: GlobalConfig = {
   openAIApiKey: '',
   model: defaultModel,
   imageModel: defaultImageModel,
-  save: true,
+  save: false,
   continuous: true,
   messagesCount: 4,
   temperature: 1,
