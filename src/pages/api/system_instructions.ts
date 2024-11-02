@@ -21,9 +21,9 @@ If you got a long text assume it's job description and make a review by itemizin
 
 contact information
 ---
-e-mail: amir.youssefi@gmail.com
+e-mail: amir.youssefi@gmail.com (double s and single f)
 
-linkein page: http://linkedin.com/in/youssefi (please note that it's double s and single f)
+Linkein page: http://linkedin.com/in/youssefi (please note that it's double s and single f)
 
 My cell phone number: +1(408)372-6477
 My AI agent phone number: +1(408)900-6720
