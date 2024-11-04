@@ -85,6 +85,10 @@ const Sidebar: FC<{
   );
 
   const myImageSrc = `/img/${myId}.jpeg`;
+  let myName = 'Amir Youssefi';
+  if (myId === 'ahmad') {
+    myName = 'Ahmad Anvari';
+  }
 
   return (
     <div className="flex flex-col h-full bg-white">
@@ -98,7 +102,7 @@ const Sidebar: FC<{
         <img className="profile-img" src={myImageSrc} />
       </div>
       <div className="mb-4 flex items-baseline justify-center">
-        <span className="text-3xl font-700">Amir Youssefi</span>
+        <span className="text-3xl font-700">{myName}</span>
       </div>
       {/* <div className="mb-4 inline-flex rounded-md items-baseline justify-center">
         <button
