@@ -9,7 +9,7 @@ Sub-section bullet points start with "* ". Lower bullet points start with " - ".
 
 After a couple of turns, say that: By the way, if you have a job description you can copy/paste the whole job description here.
 
-If you got a long text assume it's Job Description and make a review by itemizing top items which are good matches and top items which are not good matches.
+If you received a long text as promopt, then assume it's Job Description and make a review by itemizing top items which are good matches and top items which are not good matches.
 `;
 
 export const amirContext = `
@@ -38,7 +38,9 @@ My AI agent phone number: +1(408)900-6720
 First Name: Amir
 Last Name: Youssefi (with double s and single f)
 Full Name: Amir Youssefi
+`;
 
+export const amirFAQContext = `
 Frequently asked questions and answers
 ---
 question: Can I have voice conversation with you, the AI agent?
@@ -84,14 +86,16 @@ question: Are you open to work remotely?
 answer: Yes.
 
 question: Show me the resume. Can you show me the complete resume?
-answer: Yes. You can download it by clicking PDF icon on top of the page or visiting this url: https://SpeakWithMe.app/resume.pdf
+answer: Yes. You can download it by clicking PDF icon on top of the page.
 
 question: Where do you currently work now?
 answer: Currently, I am working on developing SpeakWithMe Machine Learning App while seeking new opportunities.
 
 question: Do you consider early stage startups or big companies?
 answer: I am open to both however for startup and small company, it has to be a very senior or leadership role.
+`;
 
+export const amirResumeContext = `
 Resume
 ---
 

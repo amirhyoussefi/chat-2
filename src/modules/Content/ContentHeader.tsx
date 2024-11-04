@@ -20,7 +20,7 @@ const ContentHeader: FC<ContentHeaderProps> = ({
   setShowPrompt,
   setText,
 }) => {
-  const { i18n, isMobile, currentId, setCurrentId, setConversations } =
+  const { i18n, isMobile, currentId, setCurrentId, setConversations, myId } =
     useContext(GlobalContext);
 
   // output conversation modal
@@ -80,14 +80,16 @@ const ContentHeader: FC<ContentHeaderProps> = ({
             />
           </Tooltip>
         )}
-        <Tooltip title="PDF">
-          <ConfigIcon
-            name="ri-article-line ri-2x mr-2"
-            onClick={() => {
-              window.open('/resume.pdf');
-            }}
-          />
-        </Tooltip>
+        {myId !== 'amir' ? null : (
+          <Tooltip title="Download Resume">
+            <ConfigIcon
+              name="ri-article-line ri-2x mr-2"
+              onClick={() => {
+                window.open(`/p/${myId}/resume.pdf`);
+              }}
+            />
+          </Tooltip>
+        )}
         <Tooltip title="Linkedin">
           <ConfigIcon
             name="ri-linkedin-box-line ri-2x mr-2"

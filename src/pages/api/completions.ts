@@ -9,6 +9,8 @@ import { apiKeyStrategy, apiKeys, baseURL, config, password as pwd } from '.';
 import {
   systemInstructions,
   amirContext,
+  amirFAQContext,
+  amirResumeContext,
   ahmadContext,
 } from './system_instructions';
 
@@ -24,7 +26,6 @@ export const post: APIRoute = async ({ request }) => {
   const body = await request.json();
   const { messages, temperature = 1, password, myId } = body;
   let { key, model } = body;
-  console.log('in completions, myId from body:', myId);
 
   if (!key) {
     const next = loadBalancer(apiKeys, apiKeyStrategy);
@@ -58,15 +59,16 @@ export const post: APIRoute = async ({ request }) => {
   }
 
   let fullContext = `${systemInstructions}
-
-  ${amirContext}`;
+  ${amirContext}
+  ${amirFAQContext}
+  ${amirResumeContext}
+  `;
 
   if (myId === 'ahmad') {
     fullContext = `${systemInstructions}
 
   ${ahmadContext}`;
   }
-  console.log('fullContext:', fullContext);
 
   try {
     const myMessages = messages.map((message: Message) => ({

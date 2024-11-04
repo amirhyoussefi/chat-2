@@ -84,7 +84,7 @@ const Sidebar: FC<{
       )
   );
 
-  const myImageSrc = `/img/${myId}.jpeg`;
+  const myImageSrc = `/p/${myId}/pic.jpeg`;
   let myName = 'Amir Youssefi';
   if (myId === 'ahmad') {
     myName = 'Ahmad Anvari';
