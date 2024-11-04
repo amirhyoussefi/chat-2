@@ -90,14 +90,16 @@ const ContentHeader: FC<ContentHeaderProps> = ({
             />
           </Tooltip>
         )}
-        <Tooltip title="Linkedin">
-          <ConfigIcon
-            name="ri-linkedin-box-line ri-2x mr-2"
-            onClick={() => {
-              window.open('http://linkedin.com/in/youssefi');
-            }}
-          />
-        </Tooltip>
+        {myId !== 'amir' ? null : (
+          <Tooltip title="Linkedin">
+            <ConfigIcon
+              name="ri-linkedin-box-line ri-2x mr-2"
+              onClick={() => {
+                window.open('http://linkedin.com/in/youssefi');
+              }}
+            />
+          </Tooltip>
+        )}
         {/* <Tooltip title={i18n.action_output}>
           <ConfigIcon
             name="ri-chat-download-line ri-xl mr-2"

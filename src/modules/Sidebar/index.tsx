@@ -88,6 +88,8 @@ const Sidebar: FC<{
   let myName = 'Amir Youssefi';
   if (myId === 'ahmad') {
     myName = 'Ahmad Anvari';
+  } else if (myId === 'pooya') {
+    myName = 'Pooya Karimian';
   }
 
   return (
