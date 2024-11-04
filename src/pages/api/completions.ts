@@ -6,7 +6,11 @@ import { defaultModel, supportedModels } from '@configs';
 import { Message } from '@interfaces';
 import { loadBalancer } from '@utils/server';
 import { apiKeyStrategy, apiKeys, baseURL, config, password as pwd } from '.';
-import { SYSTEM_INSTRUCTIONS } from './system_instructions';
+import {
+  systemInstructions,
+  amirContext,
+  ahmadContext,
+} from './system_instructions';
 
 export { config };
 
@@ -53,6 +57,17 @@ export const post: APIRoute = async ({ request }) => {
     );
   }
 
+  let fullContext = `${systemInstructions}
+
+  ${amirContext}`;
+
+  if (myId === 'ahmad') {
+    fullContext = `${systemInstructions}
+
+  ${ahmadContext}`;
+  }
+  console.log('fullContext:', fullContext);
+
   try {
     const myMessages = messages.map((message: Message) => ({
       role: message.role,
@@ -60,7 +75,7 @@ export const post: APIRoute = async ({ request }) => {
     }));
     const assistantMessage = {
       role: 'system',
-      content: SYSTEM_INSTRUCTIONS,
+      content: fullContext,
     };
     myMessages.unshift(assistantMessage);
     const res = await fetch(`https://${baseURL}/v1/chat/completions`, {
