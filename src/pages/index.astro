@@ -1,19 +1,32 @@
 ---
-import Main from '@modules/Main';
-import type { Lang } from '@interfaces';
 import Layout from '@/layouts/Layout.astro';
 import 'katex/dist/katex.min.css';
 import 'highlight.js/styles/atom-one-dark.css';
-
-// read lang from env/process.env
-const lang: Lang = import.meta.env.LANGUAGE || process.env.LANGUAGE || 'en';
-// read inVercel from process.env
-const inVercel = !!process.env.VERCEL;
 ---
 
 <Layout title="SpeakWithMe">
   <div id="container" class="container-full">
-    <Main lang={lang} inVercel={inVercel} client:only="react" />
+    <div class="flex flex-col h-full bg-white">
+      <div class="h-[60px] flex items-center justify-center bg-slate-200">
+        <span class="pr-1 text-gradient ri-chat-voice-ai-line ri-2x"></span>
+        <span class="ui-monospace text-3xl text-gradient font-800">
+          SpeakWithMe
+        </span>
+      </div>
+      <div class="mt-10 flex items-center justify-center">
+        <iframe
+          class="flex items-center justify-center"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeQib1rWv0EwJQKKGcnSCwUCYOuMHV7jlJ36URKawcAca-n3g/viewform?embedded=true"
+          width="640"
+          height="610"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0"
+        >
+          Loading…
+        </iframe>
+      </div>
+    </div>
   </div>
 </Layout>
 

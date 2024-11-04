@@ -26,8 +26,12 @@ import Configuration from './Configuration';
 
 const styles = getComputedStyle(document.documentElement);
 
-const Main: FC<{ lang: Lang; inVercel: boolean }> = ({ lang, inVercel }) => {
-  // gloabl configs
+const Main: FC<{ myId: string; lang: Lang; inVercel: boolean }> = ({
+  myId,
+  lang,
+  inVercel,
+}) => {
+  // global configs
   const [configs, setConfigs] = useState<Partial<GlobalConfig>>({});
 
   const i18n = getI18n(configs.lang ?? lang ?? 'en');
@@ -214,6 +218,7 @@ const Main: FC<{ lang: Lang; inVercel: boolean }> = ({ lang, inVercel }) => {
         conversations,
         setConversations,
         inVercel,
+        myId,
       }}
     >
       <ConfigProvider

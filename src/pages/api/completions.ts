@@ -18,8 +18,9 @@ export const post: APIRoute = async ({ request }) => {
   }
 
   const body = await request.json();
-  const { messages, temperature = 1, password } = body;
+  const { messages, temperature = 1, password, myId } = body;
   let { key, model } = body;
+  console.log('in completions, myId from body:', myId);
 
   if (!key) {
     const next = loadBalancer(apiKeys, apiKeyStrategy);

@@ -34,7 +34,7 @@ const Content: FC<ContentProps> = ({ setActiveSetting }) => {
   // controller
   const [controller, setController] = useState<AbortController>(null);
 
-  const { configs, currentId, conversations, setConversations } =
+  const { configs, currentId, conversations, setConversations, myId } =
     useContext(GlobalContext);
 
   const conversation = conversations[currentId];
@@ -42,6 +42,7 @@ const Content: FC<ContentProps> = ({ setActiveSetting }) => {
   const mode = conversation?.mode ?? 'text';
   const streamMessage = streamMessageMap[currentId] ?? '';
   const loading = loadingMap[currentId];
+  const myIdValue = myId;
 
   useEffect(() => {
     // lazyload, init mathJax when hasMath
@@ -102,6 +103,7 @@ const Content: FC<ContentProps> = ({ setActiveSetting }) => {
             : input,
           temperature: configs.temperature ?? 1,
           password: configs.password,
+          myId: myIdValue,
         }),
         signal: abortController.signal,
       });

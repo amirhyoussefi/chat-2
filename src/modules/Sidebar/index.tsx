@@ -14,23 +14,29 @@ const Sidebar: FC<{
   const [keyword, setKeyword] = useState('');
   // import modal
   const [visible, setVisible] = useState(false);
-  const { i18n, currentId, setCurrentId, conversations, setConversations } =
-    useContext(GlobalContext);
+  const {
+    i18n,
+    currentId,
+    setCurrentId,
+    conversations,
+    setConversations,
+    myId,
+  } = useContext(GlobalContext);
 
-  const onAdd = (mode: ConversationMode = 'text') => {
-    const id = getMaxIndex(data).toString();
-    setConversations((items) => ({
-      ...items,
-      [id]: {
-        id,
-        title: '',
-        mode,
-        messages: [],
-        createdAt: Date.now(),
-      },
-    }));
-    setCurrentId(id);
-  };
+  // const onAdd = (mode: ConversationMode = 'text') => {
+  //   const id = getMaxIndex(data).toString();
+  //   setConversations((items) => ({
+  //     ...items,
+  //     [id]: {
+  //       id,
+  //       title: '',
+  //       mode,
+  //       messages: [],
+  //       createdAt: Date.now(),
+  //     },
+  //   }));
+  //   setCurrentId(id);
+  // };
 
   const onDelete = (key: string) => {
     setConversations((items) => omit(items, [key]));
@@ -90,7 +96,7 @@ const Sidebar: FC<{
         <img src="/my-picture.png" />
       </div>
       <div className="mb-4 flex items-baseline justify-center">
-        <span className="text-3xl font-700">Amir Youssefi</span>
+        <span className="text-3xl font-700">Amir Youssefi ({myId})</span>
       </div>
       {/* <div className="mb-4 inline-flex rounded-md items-baseline justify-center">
         <button
