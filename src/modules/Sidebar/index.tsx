@@ -84,6 +84,8 @@ const Sidebar: FC<{
       )
   );
 
+  const myImageSrc = `/img/${myId}.jpeg`;
+
   return (
     <div className="flex flex-col h-full bg-white">
       <div className="h-[60px] pl-0 mt-0 flex items-center justify-center bg-slate-200">
@@ -93,10 +95,10 @@ const Sidebar: FC<{
         </span>
       </div>
       <div className="p-6 pb-2 flex items-center justify-between">
-        <img src="/my-picture.png" />
+        <img className="profile-img" src={myImageSrc} />
       </div>
       <div className="mb-4 flex items-baseline justify-center">
-        <span className="text-3xl font-700">Amir Youssefi ({myId})</span>
+        <span className="text-3xl font-700">Amir Youssefi</span>
       </div>
       {/* <div className="mb-4 inline-flex rounded-md items-baseline justify-center">
         <button

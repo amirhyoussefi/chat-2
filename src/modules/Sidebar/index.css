@@ -6,3 +6,7 @@
 .sidebar-record-item:hover .sidebar-record-item-delete {
   display: block;
 }
+
+.profile-img {
+  border-radius: 50%;
+}
