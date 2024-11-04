@@ -8,6 +8,7 @@ import { loadBalancer } from '@utils/server';
 import { apiKeyStrategy, apiKeys, baseURL, config, password as pwd } from '.';
 import {
   systemInstructions,
+  extraGenericInstructions,
   amirContext,
   amirFAQContext,
   amirResumeContext,
@@ -66,7 +67,7 @@ export const post: APIRoute = async ({ request }) => {
 
   if (myId === 'ahmad') {
     fullContext = `${systemInstructions}
-
+  ${extraGenericInstructions}
   ${ahmadContext}`;
   }
 
