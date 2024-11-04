@@ -13,6 +13,7 @@ import {
   amirFAQContext,
   amirResumeContext,
   ahmadContext,
+  pooyaContext,
 } from './system_instructions';
 
 export { config };
@@ -69,6 +70,10 @@ export const post: APIRoute = async ({ request }) => {
     fullContext = `${systemInstructions}
   ${extraGenericInstructions}
   ${ahmadContext}`;
+  } else if (myId === 'pooya') {
+    fullContext = `${systemInstructions}
+  ${extraGenericInstructions}
+  ${pooyaContext}`;
   }
 
   try {

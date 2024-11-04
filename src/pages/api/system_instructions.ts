@@ -277,3 +277,63 @@ Education
 Carnegie Mellon University, MS, Software Eng. Management
 Sharif University of Technology, BS, Electrical Engineering
 `;
+
+export const pooyaContext = `
+First Name: Pooya
+Last Name: Karimian
+Phone: 778-317-4392 URL: http://pooyak.com/
+Twitter: pooyak
+
+Professional Experiences
+---
+ - Director of Engineering, Linktree, Mar 2023 - Present
+
+ - Advisor, AttestoAttesto, Jan 2023 - Present
+
+ - Software Engineer,Meta, Dec 2013 - Oct 2022: Business Messaging, Video In-stream Ads, Messenger Rooms, Real-Time Infrastructure
+
+ - Senior Software Engineer, Sencha Inc. (Cloud Services Team), 2012-2013
+
+ - Lead Frontend Developer, Zite (formerly Worio, Acquired by CNN), 2008-2012
+
+ - Software Developer, Sxip Identity, 2007-2008
+
+ - System Developer, Ghasedak Systems, 2001-2004
+
+ - Application Developer, Sharif University Affiliated Company, 2001-2003
+
+Education
+---
+ - Simon Fraser University, MSc., Computer ScienceMSc., Computer Science, 2004 - 2007
+ - Sharif University of Technology, BSc., Computer EngineeringBSc., Computer Engineering, 1999 - 2003
+
+Publications
+---
+- P. Karimian. "Audio Communication for Multi-Robot Systems". M.Sc. Thesis. School of Computing Science, Simon Fraser University. August 2007.
+- P. Karimian, R.T. Vaughan, S. Brown. "Sounds Good: Simulation and Evaluation of Audio Communication for Multi-Robot Exploration". Proceedings of the IEEE/RSJ Int. Conf. on Intelligent Robot and Systems (IROS 2006), Beijing, China. 2006.
+- M.E. Alian, S. Bagheri Shouraki, M.T. Manzuri Shalmani, P. Karimian, P. Sabzmeydani. "Roboshark: a Gantry Pool Player Robot". Proceedings of 35th International Symposium on Robotics, Paris. 2004.
+- P. Karimian, P. Sabzmeydani. "Implementation of a Color-based Fast Object-tracking System from Video Frames in a Robotic Environment". B.Sc. Thesis. Computer Engineering Department, Sharif University of Technology. September 2003.
+- M.T. Manzuri, P. Karimian, M. Motamed, R. Mottaghi, P. Sabzmeydani, R. Taghipour. "Sharif CESR Small Size Robocup 2002 Team". RoboCup 2002: Robot Soccer World Cup VI, The 2002 International Robocup Symposium Proceedings, Fukuoka, Japan . June 2002. 444.
+- M.T. Manzuri, H.R. Chitsaz, R.Ghorbani, P. Karimian, A. Mirazi, M. Motamed, R. Mottaghi, P. Sabzmeydani. "Sharif CESR Small Size Robocup Team". RoboCup 2001: Robot Soccer World Cup V, Lecture Notes in Computer Science 2377 . Springer-Verlag. 2002. 595.
+- J. Habibi, E. Foroughi, M. Motamed, P. Karimian, H. Hatami, H. Fardad. "SharifII Soccer Simulation Team". RoboCup 2000: Robot Soccer World Cup IV, Lecture Notes in Computer Science 2019 . Springer-Verlag. 2001. 437.
+
+Technical Skills
+---
+Programming Languages: C / C++, Javascript / Node.js, Python, Perl / PHP, Objective-C, Java.
+
+Databases: MySQL, Cassandra, ZooKeeper, Riak.
+
+Platforms: Mobile: iOS / iPhone / iPad / WebOS, Cloud: AWS / EC2, Linux, Mac OS X.
+
+Web Development: HTML / CSS, JavaScript, Apache / Nginx, XUL / Mozilla Platform, WebKit.
+
+Software Management: Git / GitHub, SVN, CVS, PivotalTracker / Bugzilla / Trac / JIRA.
+
+Internationalization: Unicode, Bi-directional Text, Localization.
+
+Academic Tools and Languages: Matlab, Prolog, LISP.
+
+Computer Science: Algorithms, IP Networks, Distributed Computing, AI, Robotics.
+
+Control and Electronics: Robotics and AI, Embedded systems, Communication, Verilog HDL.
+`;
