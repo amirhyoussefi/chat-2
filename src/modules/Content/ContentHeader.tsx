@@ -6,6 +6,7 @@ import { Tooltip } from 'antd';
 import ExportConversationModal from '@components/ConversationModal/export';
 import EditModal from '@components/EditModal';
 import './index.css';
+import { json } from 'node:stream/consumers';
 
 interface ContentHeaderProps {
   conversation: Conversation;
@@ -29,6 +30,16 @@ const ContentHeader: FC<ContentHeaderProps> = ({
   // edit title modal
   const [titleText, setTitleText] = useState('');
   const [titleVisible, setTitleVisible] = useState(false);
+
+  const jsonObj = {
+    amir: { linkedin: 'https://linkedin.com/in/youssefi' },
+    ahmad: { linkedin: 'https://linkedin.com/in/anvari' },
+    pooya: { linkedin: 'https://linkedin.com/in/pooya' },
+  };
+  let linkedinUrl = '';
+  if (myId in jsonObj && jsonObj[myId].linkedin) {
+    linkedinUrl = jsonObj[myId].linkedin;
+  }
 
   return (
     <div
@@ -90,12 +101,12 @@ const ContentHeader: FC<ContentHeaderProps> = ({
             />
           </Tooltip>
         )}
-        {myId !== 'amir' ? null : (
+        {linkedinUrl === '' ? null : (
           <Tooltip title="Linkedin">
             <ConfigIcon
               name="ri-linkedin-box-line ri-2x mr-2"
               onClick={() => {
-                window.open('http://linkedin.com/in/youssefi');
+                window.open(linkedinUrl);
               }}
             />
           </Tooltip>
