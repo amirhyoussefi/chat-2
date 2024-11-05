@@ -92,6 +92,29 @@ const Sidebar: FC<{
     myName = 'Pooya Karimian';
   }
 
+  const [phoneNumber, setPhoneNumber] = useState('');
+
+  const dialPhone = async () => {
+    const postData = {
+      my_id: myId,
+      phone_to: `+1${phoneNumber}`,
+    };
+    const postParams = new URLSearchParams(postData);
+    const res = await fetch('http://52.52.139.227:8080/mc', {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      method: 'POST',
+      body: postParams,
+    });
+    if (!res.ok) {
+      return new Response(res.body, {
+        status: res.status,
+      });
+    }
+    return res;
+  };
+
   return (
     <div className="flex flex-col h-full bg-white">
       <div className="h-[60px] pl-0 mt-0 flex items-center justify-center bg-slate-200">
@@ -103,8 +126,27 @@ const Sidebar: FC<{
       <div className="p-6 pb-2 flex items-center justify-between">
         <img className="profile-img" src={myImageSrc} />
       </div>
-      <div className="mb-4 flex items-baseline justify-center">
+      <div className="mb-8 flex items-baseline justify-center">
         <span className="text-3xl font-700">{myName}</span>
+      </div>
+      <div className="font-bold p-2 flex items-center justify-between mb-0">
+        Receive a phone call from my AI Agent now:
+      </div>
+      <div className="p-2 flex items-center justify-between mb-8">
+        <Input
+          className="h-[100%]"
+          value={phoneNumber}
+          onChange={(e) => setPhoneNumber(e.target.value)}
+          prefix="+1"
+          placeholder="your phone number"
+          bordered={true}
+        />
+        <i
+          className="cursor-pointer text-gradient text-[24px] ml-[0.5rem] ri-phone-line"
+          onClick={async () => {
+            dialPhone();
+          }}
+        />
       </div>
       {/* <div className="mb-4 inline-flex rounded-md items-baseline justify-center">
         <button
@@ -127,7 +169,7 @@ const Sidebar: FC<{
           Personal Profile
         </button>
       </div> */}
-      <div className="p-2 flex items-center justify-between mb-4">
+      {/* <div className="p-2 flex items-center justify-between mb-4">
         <div className="rounded-xl h-10 border flex-1">
           <Input
             className="h-[100%]"
@@ -139,15 +181,15 @@ const Sidebar: FC<{
             allowClear
           />
         </div>
-        {/* <Dropdown
+        <Dropdown
           menu={{ items }}
           trigger={['click']}
           placement="bottomRight"
           getPopupContainer={(node) => node}
         >
           <i className="ri-chat-new-line cursor-pointer p-2 ml-1" />
-        </Dropdown> */}
-      </div>
+        </Dropdown>
+      </div> */}
       <div className="common-scrollbar flex-1 p-2 pt-0 overflow-auto">
         {sortBy(filterData, ['time'])
           .reverse()
