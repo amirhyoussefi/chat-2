@@ -135,7 +135,7 @@ const Sidebar: FC<{
       </div>
       <div className="p-2 flex items-center justify-between mb-8">
         <Input
-          className="h-[100%] mr-2 text-xl"
+          className="h-[70%] mr-2 text-xl"
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
           prefix="+1"
