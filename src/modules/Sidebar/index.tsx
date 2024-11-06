@@ -100,7 +100,7 @@ const Sidebar: FC<{
       phone_to: `+1${phoneNumber}`,
     };
     const postParams = new URLSearchParams(postData);
-    const res = await fetch('http://52.52.139.227:8080/mc', {
+    const res = await fetch('https://60ab-52-52-139-227.ngrok-free.app/mc', {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
