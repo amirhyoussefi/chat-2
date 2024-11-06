@@ -1,9 +1,10 @@
 import { FC, useContext, useState } from 'react';
-import { Dropdown, Input, MenuProps } from 'antd';
+import ConfigIcon from '@components/ConfigIcon';
+import { Tooltip, Input } from 'antd'; /* , Dropdown, MenuProps */
 import { omit, sortBy } from 'lodash-es';
 import GlobalContext from '@contexts/global';
 import { getMaxIndex } from '@utils';
-import { ConversationMode, RecordCardItem } from '@interfaces';
+import { RecordCardItem } from '@interfaces'; /* ConversationMode */
 import './index.css';
 import ImportConversationModal from '@components/ConversationModal/import';
 import RecordCard from './RecordCard';
@@ -11,11 +12,11 @@ import RecordCard from './RecordCard';
 const Sidebar: FC<{
   data: RecordCardItem[];
 }> = ({ data }) => {
-  const [keyword, setKeyword] = useState('');
+  const [keyword] = useState(''); /* , setKeyword */
   // import modal
   const [visible, setVisible] = useState(false);
   const {
-    i18n,
+    // i18n,
     currentId,
     setCurrentId,
     conversations,
@@ -134,19 +135,21 @@ const Sidebar: FC<{
       </div>
       <div className="p-2 flex items-center justify-between mb-8">
         <Input
-          className="h-[100%]"
+          className="h-[100%] mr-2"
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
           prefix="+1"
           placeholder="your phone number"
           bordered={true}
         />
-        <i
-          className="cursor-pointer text-gradient text-[24px] ml-[0.5rem] ri-phone-line"
-          onClick={async () => {
-            dialPhone();
-          }}
-        />
+        <Tooltip title="Call Me!">
+          <ConfigIcon
+            name="cursor-pointer text-gradient ri-2x ri-phone-line"
+            onClick={() => {
+              dialPhone();
+            }}
+          />
+        </Tooltip>
       </div>
       {/* <div className="mb-4 inline-flex rounded-md items-baseline justify-center">
         <button
