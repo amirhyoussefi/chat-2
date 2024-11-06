@@ -131,15 +131,15 @@ const Sidebar: FC<{
         <span className="text-3xl font-700">{myName}</span>
       </div>
       <div className="font-bold p-2 flex items-center justify-between mb-0">
-        Receive a phone call from my AI Agent now:
+        Get a phone call from my AI Agent now:
       </div>
       <div className="p-2 flex items-center justify-between mb-8">
         <Input
-          className="h-[100%] mr-2"
+          className="h-[100%] mr-2 text-xl"
           value={phoneNumber}
           onChange={(e) => setPhoneNumber(e.target.value)}
           prefix="+1"
-          placeholder="your phone number"
+          placeholder="&nbsp;your phone number"
           bordered={true}
         />
         <Tooltip title="Call Me!">
