@@ -1,4 +1,4 @@
-import { FC, useContext, useState } from 'react';
+import { FC, useContext, useState, useEffect } from 'react';
 import ConfigIcon from '@components/ConfigIcon';
 import { Tooltip, Input } from 'antd'; /* , Dropdown, MenuProps */
 import { omit, sortBy } from 'lodash-es';
@@ -95,7 +95,14 @@ const Sidebar: FC<{
 
   const [phoneNumber, setPhoneNumber] = useState('');
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
+
   const dialPhone = async () => {
+    toggleVisibility();
     const postData = {
       my_id: myId,
       phone_to: `+1${phoneNumber}`,
@@ -133,7 +140,7 @@ const Sidebar: FC<{
       <div className="font-bold p-2 flex items-center justify-between mb-0">
         Get a phone call from my AI Agent now:
       </div>
-      <div className="p-2 flex items-center justify-between mb-8">
+      <div className="p-2 flex items-center justify-between mb-0">
         <Input
           className="h-[70%] mr-2 text-xl"
           value={phoneNumber}
@@ -154,6 +161,16 @@ const Sidebar: FC<{
           />
         </Tooltip>
       </div>
+      {isVisible && (
+        <div
+          className="font-bold p-0 flex items-center justify-left mb-8"
+          id="three-dots"
+        >
+          <div className="ml-6 mt-0">
+            <div className="dot-elastic"></div>
+          </div>
+        </div>
+      )}
       {/* <div className="mb-4 inline-flex rounded-md items-baseline justify-center">
         <button
           type="button"
@@ -196,7 +213,7 @@ const Sidebar: FC<{
           <i className="ri-chat-new-line cursor-pointer p-2 ml-1" />
         </Dropdown>
       </div> */}
-      <div className="common-scrollbar flex-1 p-2 pt-0 overflow-auto">
+      {/* <div className="common-scrollbar flex-1 p-2 pt-0 overflow-auto">
         {sortBy(filterData, ['time'])
           .reverse()
           .map((conversation, index) => (
@@ -219,7 +236,7 @@ const Sidebar: FC<{
         nextId={getMaxIndex(data).toString()}
         open={visible}
         onCancel={() => setVisible(false)}
-      />
+      /> */}
     </div>
   );
 };
