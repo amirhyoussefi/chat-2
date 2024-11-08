@@ -144,14 +144,15 @@ const Sidebar: FC<{
         <Input
           className="h-[70%] mr-2 text-xl"
           value={phoneNumber}
-          onChange={(e) => setPhoneNumber(e.target.value)}
+          onChange={(e) =>
+            setPhoneNumber(e.target.value.replace(/[^0-9]/g, ''))
+          }
           prefix="+1"
           placeholder="&nbsp;your phone number"
           bordered={true}
           onPressEnter={(e) => {
             dialPhone();
           }}
-          type="number"
         />
         <Tooltip title="Call Me!">
           <ConfigIcon
