@@ -151,6 +151,7 @@ const Sidebar: FC<{
           onPressEnter={(e) => {
             dialPhone();
           }}
+          type="number"
         />
         <Tooltip title="Call Me!">
           <ConfigIcon
