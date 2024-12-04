@@ -128,7 +128,7 @@ const Sidebar: FC<{
       <div className="h-[60px] pl-0 mt-0 flex items-center justify-center bg-slate-200">
         <span className="pr-1 text-gradient ri-chat-voice-ai-line ri-2x"></span>
         <span className="ui-monospace text-3xl text-gradient font-800">
-          SpeakWithMe
+          CareersChat
         </span>
       </div>
       <div className="p-6 pb-2 flex items-center justify-between">

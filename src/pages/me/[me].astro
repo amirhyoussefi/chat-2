@@ -13,7 +13,7 @@ const inVercel = !!process.env.VERCEL;
 const { me } = Astro.params;
 ---
 
-<Layout title="SpeakWithMe">
+<Layout title="CareersChat">
   <div id="container" class="container-full">
     <Main myId={me} lang={lang} inVercel={inVercel} client:only="react" />
   </div>

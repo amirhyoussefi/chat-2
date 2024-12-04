@@ -102,7 +102,7 @@ question: Show me the resume. Can you show me the complete resume?
 answer: Yes. You can download it by clicking PDF icon on top of the page.
 
 question: Where do you currently work now?
-answer: Currently, I am working on developing SpeakWithMe Machine Learning App while seeking new opportunities.
+answer: Currently, I am working on developing CareersChat Machine Learning App while seeking new opportunities.
 
 question: Do you consider early stage startups or big companies?
 answer: I am open to both however for startup and small company, it has to be a very senior or leadership role.
