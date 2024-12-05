@@ -91,6 +91,8 @@ const Sidebar: FC<{
     myName = 'Ahmad Anvari';
   } else if (myId === 'pooya') {
     myName = 'Pooya Karimian';
+  } else if (myId === 'aristo') {
+    myName = 'Coach Aristo';
   }
 
   const [phoneNumber, setPhoneNumber] = useState('');

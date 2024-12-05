@@ -14,6 +14,8 @@ import {
   amirResumeContext,
   ahmadContext,
   pooyaContext,
+  systemInstructionsForCoach,
+  aristoCoachContext,
 } from './system_instructions';
 
 export { config };
@@ -74,6 +76,9 @@ export const post: APIRoute = async ({ request }) => {
     fullContext = `${systemInstructions}
   ${extraGenericInstructions}
   ${pooyaContext}`;
+  } else if (myId === 'aristo') {
+    fullContext = `${systemInstructionsForCoach}
+  ${aristoCoachContext}`;
   }
 
   try {
